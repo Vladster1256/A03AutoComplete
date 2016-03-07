@@ -94,5 +94,9 @@ public class Term implements Comparable<Term>
 		Arrays.sort(t, byReverseWeightOrder());
 		
 		StdOut.println("Reverse Weight Sort: " + Arrays.toString(t));
+		
+		Arrays.sort(t, byPrefixOrder(2));
+		
+		StdOut.println("Prefix Sort: " + Arrays.toString(t));
 	}
 }
