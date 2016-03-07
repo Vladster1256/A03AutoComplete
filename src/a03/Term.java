@@ -2,6 +2,12 @@ package a03;
 
 import java.util.Comparator;
 
+/**
+ * 
+ * @author Monte
+ *
+ */
+
 public class Term implements Comparable<Term> {
 
     // Initialize a term with the given query string and weight.
