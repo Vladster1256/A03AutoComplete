@@ -23,14 +23,6 @@ public class TermTest
 	@Test
 	public void testNulls()
 	{
-		assertFalse(isNull(term));
-	}
-	
-	public boolean isNull(Term t1)
-	{
-		if(t1 == null)
-			return true;
-		else
-			return false;
+		assertFalse(term == null);
 	}
 }
