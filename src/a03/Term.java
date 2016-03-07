@@ -80,7 +80,8 @@ public class Term implements Comparable<Term>
 		@Override
 		public int compare(Term o1, Term o2)
 		{
-			return o1.query.substring(0, n+1).compareToIgnoreCase(o2.query.substring(0, n+1));
+			StdOut.println(o1.query.substring(0, n) + " vs " + o2.query.substring(0, n));
+			return o1.query.substring(0, n).compareToIgnoreCase(o2.query.substring(0, n));
 		}
 		
 	}
@@ -95,7 +96,7 @@ public class Term implements Comparable<Term>
 		
 		StdOut.println("Reverse Weight Sort: " + Arrays.toString(t));
 		
-		Arrays.sort(t, byPrefixOrder(4));
+		Arrays.sort(t, byPrefixOrder(2));
 		
 		StdOut.println("Prefix Sort: " + Arrays.toString(t));
 	}
