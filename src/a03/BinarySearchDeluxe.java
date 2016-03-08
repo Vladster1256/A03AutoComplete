@@ -50,7 +50,9 @@ public class BinarySearchDeluxe {
 					continue;
 				}
 			}			
-		}while(true);
+		}while(min != mid);
+		 
+		 return - 1;
     }
 
     // Return the index of the last key in a[] that equals the search key, or -1 if no such key.
@@ -63,6 +65,6 @@ public class BinarySearchDeluxe {
     public static void main(String[] args)
     {
     	String[] strings = {"a", "a", "b", "c", "d", "d", "e", "e", "e", "f", "h", "i", "k", "k", "l", "m", "o"};
-    	System.out.println(firstIndexOf(strings, "k", String.CASE_INSENSITIVE_ORDER));
+    	System.out.println(firstIndexOf(strings, "d", String.CASE_INSENSITIVE_ORDER));
     }		
 }
