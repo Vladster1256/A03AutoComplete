@@ -28,12 +28,12 @@ public class BinarySearchDeluxe {
 			}
 			else if(comparator.compare(key, a[mid]) < 0)
 			{
-				max = mid;
+				max = mid - 1;
 				mid = max / 2;
 			}
 			else
 			{
-				min = mid;
+				min = mid + 1;
 				mid += (max - mid) / 2;
 			}			
 		}while(min <= mid);
@@ -65,12 +65,12 @@ public class BinarySearchDeluxe {
 			}
 			else if(comparator.compare(key, a[mid]) < 0)
 			{
-				max = mid;
+				max = mid - 1;
 				mid = max / 2;
 			}
 			else
 			{
-				min = mid;
+				min = mid + 1;
 				mid += (max - mid) / 2;
 			}			
 		}while(min <= mid);
