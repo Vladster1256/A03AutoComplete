@@ -20,27 +20,11 @@ public class BinarySearchDeluxeTest
 	}
 
 	@Test
-	public void testFirstIndexOf()
-	{
-		int index = BinarySearchDeluxe.firstIndexOf(strings2, "s", String.CASE_INSENSITIVE_ORDER);
-		assertEquals(17, index);
-	}
-	
-	@Test
-	public void testLastIndexOf()
-	{
-		int index = BinarySearchDeluxe.lastIndexOf(strings2, "b", String.CASE_INSENSITIVE_ORDER);
-		assertEquals(0, index);
-	}
-
-	@Test
 	public void testAllIndexesFirst()
 	{
 		for(int i = 0; i < strings2.length; i++)
 		{
-			System.out.println("index: " + i + " value: " + strings2[i]);
 		int index = BinarySearchDeluxe.firstIndexOf(strings2, strings2[i], String.CASE_INSENSITIVE_ORDER);
-		System.out.println("Result: " + index);
 		assertEquals(i, index);
 		}
 	}
@@ -50,11 +34,51 @@ public class BinarySearchDeluxeTest
 	{
 		for(int i = 0; i < strings2.length; i++)
 		{
-			System.out.println("index: " + i + " value: " + strings2[i]);
 		int index = BinarySearchDeluxe.lastIndexOf(strings2, strings2[i], String.CASE_INSENSITIVE_ORDER);
-		System.out.println("Result: " + index);
 		assertEquals(i, index);
 		}
+	}
+	
+	@Test
+	public void testFirstIndexOfA()
+	{
+		int index = BinarySearchDeluxe.firstIndexOf(strings1, "A", String.CASE_INSENSITIVE_ORDER);
+		assertEquals(0, index);
+	}
+	
+	@Test
+	public void testLastIndexOfA()
+	{
+		int index = BinarySearchDeluxe.lastIndexOf(strings1, "A", String.CASE_INSENSITIVE_ORDER);
+		assertEquals(1, index);
+	}
+	
+	@Test
+	public void testFirstIndexOfD()
+	{
+		int index = BinarySearchDeluxe.firstIndexOf(strings1, "d", String.CASE_INSENSITIVE_ORDER);
+		assertEquals(4, index);
+	}
+	
+	@Test
+	public void testLastIndexOfD()
+	{
+		int index = BinarySearchDeluxe.lastIndexOf(strings1, "d", String.CASE_INSENSITIVE_ORDER);
+		assertEquals(5, index);
+	}
+	
+	@Test
+	public void testFirstIndexOfE()
+	{
+		int index = BinarySearchDeluxe.firstIndexOf(strings1, "e", String.CASE_INSENSITIVE_ORDER);
+		assertEquals(6, index);
+	}
+	
+	@Test
+	public void testLastIndexOfE()
+	{
+		int index = BinarySearchDeluxe.lastIndexOf(strings1, "e", String.CASE_INSENSITIVE_ORDER);
+		assertEquals(8, index);
 	}
 
 }
