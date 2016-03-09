@@ -22,8 +22,8 @@ public class BinarySearchDeluxeTest
 	@Test
 	public void testFirstIndexOf()
 	{
-		int index = BinarySearchDeluxe.firstIndexOf(strings2, "b", String.CASE_INSENSITIVE_ORDER);
-		assertEquals(0, index);
+		int index = BinarySearchDeluxe.firstIndexOf(strings2, "s", String.CASE_INSENSITIVE_ORDER);
+		assertEquals(17, index);
 	}
 	
 	@Test
@@ -33,15 +33,17 @@ public class BinarySearchDeluxeTest
 		assertEquals(0, index);
 	}
 
-//	@Test
-//	public void testAllIndexesFirst()
-//	{
-//		for(int i = 0; i < strings2.length; i++)
-//		{
-//			int indexF = BinarySearchDeluxe.firstIndexOf(strings2, strings2[i], String.CASE_INSENSITIVE_ORDER);
-//			if(indexF != i)
-//				fail();
-//		}
-//	}
+	@Test
+	public void testAllIndexesFirst()
+	{
+		for(int i = 0; i < strings2.length; i++)
+		{
+			System.out.println("Index: " + i + " Value: " + strings2[i]);
+			int indexF = BinarySearchDeluxe.firstIndexOf(strings2, strings2[i], String.CASE_INSENSITIVE_ORDER);
+			System.out.println("Result: " + indexF);
+			if(indexF != i)
+				fail();
+		}
+	}
 
 }

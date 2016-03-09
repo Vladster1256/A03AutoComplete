@@ -17,6 +17,8 @@ public class BinarySearchDeluxe {
 			return - 1;
 		else if(comparator.compare(key, a[min]) == 0)
 			return min;
+		else if(comparator.compare(key, a[max]) == 0 && comparator.compare(key, a[max - 1]) < 0)
+			return max;
 		
 		 do
 		{
@@ -26,12 +28,12 @@ public class BinarySearchDeluxe {
 			}
 			else if(comparator.compare(key, a[mid]) < 0)
 			{
-				max = mid--;
+				max = mid;
 				mid = max / 2;
 			}
 			else
 			{
-				min = mid++;
+				min = mid;
 				mid += (max - mid) / 2;
 			}			
 		}while(min <= mid);
@@ -52,7 +54,9 @@ public class BinarySearchDeluxe {
 			return - 1;
 		else if(comparator.compare(key, a[max]) == 0)
 			return max;
-		
+		else if(comparator.compare(key, a[min]) == 0 && comparator.compare(key, a[min + 1]) > 0)
+			return min;
+				
 		 do
 		{
 			if(comparator.compare(key, a[mid]) == 0 && comparator.compare(key, a[mid + 1]) < 0)
@@ -61,25 +65,25 @@ public class BinarySearchDeluxe {
 			}
 			else if(comparator.compare(key, a[mid]) < 0)
 			{
-				max = mid--;
+				max = mid;
 				mid = max / 2;
 			}
 			else
 			{
-				min = mid++;
+				min = mid;
 				mid += (max - mid) / 2;
 			}			
 		}while(min <= mid);
 		 
 		 return - 1;
     }
-    
+       
     public static void main(String[] args)
     {
     	String[] strings1 = {"a", "b", "b", "c", "d", "d", "e", "e", "e", "f", "h", "i", "k", "k", "l", "m", "o", "p"};
     	//                    0    1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17
     	String[] strings2 = {"b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s"};
     	//                    0    1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17
-    	System.out.println(firstIndexOf(strings2, "s", String.CASE_INSENSITIVE_ORDER));
+    	System.out.println(firstIndexOf(strings2, "g", String.CASE_INSENSITIVE_ORDER));
     }		
 }
