@@ -80,7 +80,6 @@ public class Term implements Comparable<Term>
 		@Override
 		public int compare(Term o1, Term o2)
 		{
-			StdOut.println(o1.query.substring(0, n) + " vs " + o2.query.substring(0, n));
 			return o1.query.substring(0, n).compareToIgnoreCase(o2.query.substring(0, n));
 		}
 		
