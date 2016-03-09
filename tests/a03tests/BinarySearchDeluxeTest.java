@@ -38,11 +38,22 @@ public class BinarySearchDeluxeTest
 	{
 		for(int i = 0; i < strings2.length; i++)
 		{
-			System.out.println("Index: " + i + " Value: " + strings2[i]);
-			int indexF = BinarySearchDeluxe.firstIndexOf(strings2, strings2[i], String.CASE_INSENSITIVE_ORDER);
-			System.out.println("Result: " + indexF);
-			if(indexF != i)
-				fail();
+			System.out.println("index: " + i + " value: " + strings2[i]);
+		int index = BinarySearchDeluxe.firstIndexOf(strings2, strings2[i], String.CASE_INSENSITIVE_ORDER);
+		System.out.println("Result: " + index);
+		assertEquals(i, index);
+		}
+	}
+	
+	@Test
+	public void testAllIndexesLast()
+	{
+		for(int i = 0; i < strings2.length; i++)
+		{
+			System.out.println("index: " + i + " value: " + strings2[i]);
+		int index = BinarySearchDeluxe.lastIndexOf(strings2, strings2[i], String.CASE_INSENSITIVE_ORDER);
+		System.out.println("Result: " + index);
+		assertEquals(i, index);
 		}
 	}
 
