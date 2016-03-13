@@ -43,6 +43,7 @@ public class TermTest {
 	}
 		
 	@Test
+<<<<<<< HEAD
 	public void testByReverseOrder() {
 		String termsReverseWeightOrder = "[3340398.0\tthey, 2820265.0\ttheir, " +
 				"2509917.0\tthem, 2446500.0\tthereby, 1961200.0\tthere]";
@@ -72,6 +73,11 @@ public class TermTest {
 		Collections.sort(terms);
  
 	    assertEquals(termsNaturalOrder, terms.toString());
+=======
+	public void testNulls()
+	{
+		assertFalse(term == null);
+>>>>>>> refs/remotes/origin/master
 	}
 
 	@Test

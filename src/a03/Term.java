@@ -78,11 +78,15 @@ public class Term implements Comparable<Term>
 		@Override
 		public int compare(Term o1, Term o2)
 		{
+<<<<<<< HEAD
 			if(n1 > o1.query.length())
 				n1 = o1.query.length();
 			if(n2 > o2.query.length())
 				n2 = o2.query.length();
 			return o1.query.substring(0, n1).compareToIgnoreCase(o2.query.substring(0, n2));
+=======
+			return o1.query.substring(0, n).compareToIgnoreCase(o2.query.substring(0, n));
+>>>>>>> refs/remotes/origin/master
 		}
 	}
 }
