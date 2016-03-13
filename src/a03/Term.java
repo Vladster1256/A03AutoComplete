@@ -1,13 +1,10 @@
 package a03;
 
-import java.util.Arrays;
 import java.util.Comparator;
-
-import edu.princeton.cs.algs4.StdOut;
 
 /**
  * 
- * @author Monte
+ * @author Monte Swapp
  *
  */
 
@@ -64,8 +61,7 @@ public class Term implements Comparable<Term>
 		@Override
 		public int compare(Term o1, Term o2)
 		{
-			double result = o1.weight - o2.weight;
-			return (int)result * -1;
+			return (int)(o1.weight - o2.weight) * -1;
 		}
 	}
 	
@@ -88,20 +84,5 @@ public class Term implements Comparable<Term>
 				n2 = o2.query.length();
 			return o1.query.substring(0, n1).compareToIgnoreCase(o2.query.substring(0, n2));
 		}
-	}
-
-	public static void main(String[] args)
-	{
-		Term[] t = {new Term("China",123.01), new Term("Japan",123.02), new Term("Korea",124.011), new Term("Canada",213.078), new Term("Mexico",210.95)};
-
-		StdOut.println("Default: " + Arrays.toString(t));
-		
-		Arrays.sort(t, byReverseWeightOrder());
-		
-		StdOut.println("Reverse Weight Sort: " + Arrays.toString(t));
-		
-		Arrays.sort(t, byPrefixOrder(2));
-		
-		StdOut.println("Prefix Sort: " + Arrays.toString(t));
 	}
 }
